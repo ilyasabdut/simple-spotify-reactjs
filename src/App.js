@@ -36,7 +36,6 @@ function App() {
   const [completeModal, toggleCompleteModal] = useModali({
     animated: true,
     title: "Are you sure?",
-    message: "Deleting this user will be permanent.",
   });
 
   const getNowPlaying = () => {
