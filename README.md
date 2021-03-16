@@ -26,11 +26,15 @@ Images when the web is running
 ![image](https://user-images.githubusercontent.com/23490571/111354260-b42ec300-86b8-11eb-8761-1951b0b1c22e.png)
 
 4. After i clicked Check Now Playing button and Playlist Button (Vampire Weekend)
-![image](https://user-images.githubusercontent.com/23490571/111354622-17b8f080-86b9-11eb-8297-0d7cdfb1961a.png)
+![image](https://user-images.githubusercontent.com/23490571/111359771-80ef3280-86be-11eb-9e6b-8ace05d96c06.png)
 
-5. After i clicked Remove Track (I stand corrected) with response in console
-![image](https://user-images.githubusercontent.com/23490571/111354841-52bb2400-86b9-11eb-9bae-a99ff2703621.png)
+5. After i clicked remove, it will prompt another buttons, cancel will close the modal and remove will delete the track from playlist (I tried remove "I Stand Corrected"
+![image](https://user-images.githubusercontent.com/23490571/111359901-b005a400-86be-11eb-8354-528dd4e2dc6e.png)
 
-6. I should click again on the Vampire weekend playlist button first to see any changes . "I stand corrected" is gone
-![image](https://user-images.githubusercontent.com/23490571/111355373-e55bc300-86b9-11eb-9e02-233640ca71ff.png)
+6. After i clicked Remove Track (I stand corrected) with response in console
+![image](https://user-images.githubusercontent.com/23490571/111359980-ca3f8200-86be-11eb-80a5-8940c5fc1b87.png)
+
+7. I should click again on the Vampire weekend playlist button first to see any changes . "I stand corrected" is gone
+![image](https://user-images.githubusercontent.com/23490571/111360050-db888e80-86be-11eb-8e97-51808698bad8.png)
+
 
