@@ -168,7 +168,7 @@ function App() {
                                         )
                                       }
                                     >
-                                      Check Now Playing
+                                      Remove Track
                                     </button>
                                   </li>
                                 )
