@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/NavBar";
 import Profile from "./components/Profile";
+import Modali, { useModali } from "modali";
 
 import SpotifyWebApi from "spotify-web-api-js";
 const spotifyApi = new SpotifyWebApi();
@@ -31,6 +32,11 @@ function App() {
   const [nowPlaying, setNowPlaying] = useState({
     name: "Not Checked",
     albumArt: "",
+  });
+  const [completeModal, toggleCompleteModal] = useModali({
+    animated: true,
+    title: "Are you sure?",
+    message: "Deleting this user will be permanent.",
   });
 
   const getNowPlaying = () => {
@@ -62,7 +68,7 @@ function App() {
       ])
       .then(
         function (data) {
-          console.log("Tracks removed from playlist!");
+          console.log("Tracks removed from playlist!", data);
         },
         function (err) {
           console.log("Something went wrong!", err);
@@ -161,15 +167,36 @@ function App() {
                                   <li className="list-group-item">
                                     {track.track.name}{" "}
                                     <button
-                                      onClick={() =>
-                                        removeTrack(
-                                          currentPlaylist.id,
-                                          track.track.uri
-                                        )
-                                      }
+                                      onClick={toggleCompleteModal}
+                                      className="btn btn-danger"
                                     >
-                                      Remove Track
+                                      Remove
                                     </button>
+                                    <Modali.Modal {...completeModal}>
+                                      <div className="container">
+                                        <div className="text-center">
+                                          <button
+                                            className="btn btn-primary btn-md mr-1"
+                                            onClick={() =>
+                                              toggleCompleteModal()
+                                            }
+                                          >
+                                            Cancel
+                                          </button>{" "}
+                                          <button
+                                            className="btn btn-danger"
+                                            onClick={() =>
+                                              removeTrack(
+                                                currentPlaylist.id,
+                                                track.track.uri
+                                              )
+                                            }
+                                          >
+                                            Remove Track
+                                          </button>{" "}
+                                        </div>
+                                      </div>
+                                    </Modali.Modal>
                                   </li>
                                 )
                               )}
